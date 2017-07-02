@@ -19,9 +19,11 @@ module.exports = {
   //  'uri': 'mongodb://yojlucas:Myla12345@@lutongbahaycluster-shard-00-00-dnnpe.mongodb.net:27017,lutongbahaycluster-shard-00-01-dnnpe.mongodb.net:27017,lutongbahaycluster-shard-00-02-dnnpe.mongodb.net:27017/db?ssl=true&replicaSet=LutongBahayCluster-shard-0&authSource=admin',
    
     //for heroku
-   'MONGODB_URI': 'mongodb://heroku_gbcj8ldc:inl65f07cqrvdlhupd56v6034q@ds145302.mlab.com:45302/heroku_gbcj8ldc',
+   //'MONGODB_URI': 'mongodb://yojlucas:Myla12345@@ds143892.mlab.com:43892/lutongbahaydb',
     
     //'MONGOLAB_URI': 'mongodb://localhost/lutongbahay',
+    
+    'MONGOLAB_BROWN_URI':'mongodb://yojlucas:Myla12345@@ds143892.mlab.com:43892/lutongbahaydb',
     
     
     'facebook': {

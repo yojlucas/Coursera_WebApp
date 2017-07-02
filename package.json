@@ -2,11 +2,46 @@
   "name": "webApp",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+       "postinstall": "bower install && gulp build-libs && gulp build"
+    
   },
   "devDependencies": {
-    "autoprefixer-core": "^5.2.1",
-    "browser-sync": "^2.18.11",
+    "autoprefixer-core": "^5.2.1"
+   
+  },
+  "engines": {
+    "node": ">=7.9.0",
+    "npm": ">=4.6.1"
+  },
+  "dependencies": {
+    "@uirouter/angular": "^1.0.0-beta.6",
+    "@uirouter/angularjs": "^1.0.3",
+    "angular-cli": "^1.0.0-beta.28.3",
+    "angular-msgbox": "^0.1.1",
+    "angular-ui-router": "^1.0.1",
+    "body-parser": "^1.17.2",
+    "bower": "^1.8.0",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.8",
+    "del": "^2.2.2",
+    "express": "^4.15.3",
+    "jade": "^1.11.0",
+    "jsonwebtoken": "^7.4.1",
+    "karma": "^0.13.0",
+    "mongodb-stitch": "0.0.16",
+    "mongoose": "^4.10.8",
+    "mongoose-currency": "^0.2.0",
+    "morgan": "^1.8.2",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0",
+    "rltm": "^1.3.1",
+    "rxjs": "^5.4.1",
+    "serve-favicon": "^2.4.3",
+    "socket.io": "^2.0.3",
+     "browser-sync": "^2.18.11",
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
     "grunt-concat-css": "^0.3.2",
@@ -45,37 +80,5 @@
     "jshint-stylish": "^1.0.0",
     "karma-bower": "^1.0.1",
     "time-grunt": "^1.0.0"
-  },
-  "engines": {
-    "node": ">=7.9.0",
-    "npm": ">=4.6.1"
-  },
-  "dependencies": {
-    "@uirouter/angular": "^1.0.0-beta.6",
-    "@uirouter/angularjs": "^1.0.3",
-    "angular-cli": "^1.0.0-beta.28.3",
-    "angular-msgbox": "^0.1.1",
-    "angular-ui-router": "^1.0.1",
-    "body-parser": "^1.17.2",
-    "bower": "^1.8.0",
-    "cookie-parser": "^1.4.3",
-    "debug": "^2.6.8",
-    "del": "^2.2.2",
-    "express": "^4.15.3",
-    "jade": "^1.11.0",
-    "jsonwebtoken": "^7.4.1",
-    "karma": "^0.13.0",
-    "mongodb-stitch": "0.0.16",
-    "mongoose": "^4.10.8",
-    "mongoose-currency": "^0.2.0",
-    "morgan": "^1.8.2",
-    "passport": "^0.3.2",
-    "passport-facebook": "^2.1.1",
-    "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^4.0.0",
-    "rltm": "^1.3.1",
-    "rxjs": "^5.4.1",
-    "serve-favicon": "^2.4.3",
-    "socket.io": "^2.0.3"
   }
 }
