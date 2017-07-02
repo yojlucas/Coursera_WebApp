@@ -1,0 +1,152 @@
+html {
+ position: relative;
+  min-height: 100%;  
+}
+.row-header {
+  margin: 10px auto;
+  padding: 15px 0px;
+  color: aliceblue; 
+  font-family: sans-serif;
+  font-size: 3em;
+}
+.row-content {
+  margin: 0px auto;
+  padding: 40px 0px;
+  min-height: 500px; 
+}
+.navbar-inverse {
+  background: #02261D;
+  color: aliceblue;
+ padding: 10px;
+}
+.tab-content {
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  padding: 10px;
+}
+.jumbotron{
+    background-image: url(../images/sweetandsoursalmon.jpg);
+    margin-bottom: 0;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;   
+} 
+.jumbotron img{
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.navbar-fixed-center {
+    background-color: #5B7A72;
+    text-align: center;
+    padding: 10px;
+    color: aliceblue !important;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+/************CONTENT******************************/
+nav a {
+    color: aliceblue;
+    font-size: 20px !important; 
+    padding: 55px;
+    
+}
+.caption{
+    text-align: center;
+    border-bottom: 1px;
+    color: black !important; 
+}
+p {
+    font-style: italic;
+    font-family: sans-serif;
+    font-size: 17px !important; 
+    color: black !important;
+}
+.h1{
+    color: #02261D;
+}
+.form-horizontal{
+    background: #F7FCFA;
+    border: 1px solid aliceblue;
+}
+#accordion{
+    height: auto;
+}
+.custom-file-input{
+    padding: 22px 30px;
+}
+label{
+    font-size: 15px;
+    padding: 5px;
+}
+.breadcrumb{
+    background: #F7FCFA;
+}
+.img{
+    border: 0 none;
+    box-shadow: none;   
+}
+/************CAROUSEL**********************/
+.carousel-header{
+    font-family:sans-serif;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+.carousel {  
+    background: #F7FCFA;  
+}
+.carousel .item {   
+    height: 700px;   
+}
+.item img {
+    position: absolute;
+    min-height: 500px;
+    margin: 0 auto; 
+    max-width: none; 
+    left: -9999px;  
+    right: -9999px;    
+}
+.container-fluid {
+   padding: 20px;
+   margin-left:50px;
+    margin-right:50px;
+    max-width: 100%;
+    
+}
+.thumbnail-no-border {
+    border: none;
+    
+}
+/**************FOOTER*******************/
+.footer{
+  padding: 20px;
+  background-color: #02261D;
+  color: aliceblue;
+  width: 100%;
+  position: absolute;
+  height: auto;
+}
+.social{
+     text-align: right;
+     position: relative; 
+}
+.row-footer-top{
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#F0F8FF, #5B7A72, #02261D); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F0F8FF, #5B7A72, #02261D); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F0F8FF, #5B7A72, #02261D); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F0F8FF, #5B7A72, #02261D); /* Standard syntax */
+    border-bottom: 1px solid white;
+    background-color: #5B7A72;
+    background-repeat: no-repeat;
+    margin: 0px auto;
+    padding: 20px 0px;
+    color: aliceblue;    
+}

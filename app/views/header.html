@@ -1,0 +1,77 @@
+<!--header.html
+by: Joy Lucas
+5/12/2017
+-->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" ui-sref="app">
+            <img src="images/logo.png" height=30 width=40> </a>
+        <a class="navbar-brand" ui-sref="app">
+            <img src="images/logo1.png" height=30 width=300> </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+
+            <button type="button" class="btn btn-warning btn-transparent">
+                <li ng-class="{active: stateis('app')}">
+                <a ui-sref="app"> Welcome</a></li>
+            </button>
+
+            <button type="button" class="btn btn-warning btn-transparent">
+                <li ng-class="{active: stateis('app.howitworks')}">
+                <a ui-sref="app.howitworks"> How it Works</a></li>
+            </button>
+        
+
+<!------ User login navbar-hear-right------------>
+     
+           <button type="button" class="btn btn-warning btn-transparent">
+               <li ng-show="!loggedIn">
+               <a ng-click="openLogin()"><span class="glyphicon glyphicon-user"></span> Login</a>
+               </li>
+               <li ng-if="loggedIn">
+                    <a>{{username}}</a>
+               </li>
+               <li ng-if="loggedIn"><a ng-click="logOut()">
+                <span class="glyphicon glyphicon-user"></span> Logout</a>
+               </li>
+            </button>
+        </ul>
+    </div>      
+</nav>         
+ <!------ -----------JUMBOTRON-------------------->               
+<header class="jumbotron">
+   <div class="container">
+        <div class="row row-header">             
+           <img src="images/banner.png" class="img-responsive">
+           <img src="images/header.png" class="img-responsive">            
+        </div>
+    </div>
+</header>
+ <!---------- SECOND NAVIGATION------------------->
+<nav class="navbar navbar-fixed-center" role="navigation">
+  <div class="col-xs-12">         
+    <button type="button" class="btn btn-warning btn-transparent">
+        <div ng-class="{active: stateis('app.sell')}"> 
+            <a ui-sref="app.sell">SELL</a></div>
+     </button>
+
+    <button type="button" class="btn btn-warning btn-transparent">
+        <div ng-class="{active: stateis('app.viewall')}">  
+            <a ui-sref="app.viewall">VIEW ALL FOOD ITEMS</a></div>
+            </button>
+
+    <button type="button" class="btn btn-warning btn-transparent">
+        <div ng-class="{active: stateis('app.favorites')}">
+            <a ui-sref="app.favorites">FAVORITES</a></div>
+     </button>
+  </div>        
+</nav> 

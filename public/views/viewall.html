@@ -1,0 +1,144 @@
+<!--viewall.html
+by: Joy Lucas
+5/10/2017
+-->
+
+<div class="container">   
+    <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="#!/main">Home</a></li>
+                   <li class="active">List of all Available Items</li>
+               </ul>
+            </div>
+        
+            <div class="col-xs-12">
+               <h3>List of all Available Items</h3>
+               <hr>
+            </div>
+          
+        </div>
+  
+    <div class="row row-content">
+        <div class=" col-xs-4">
+                <div class="thumbnail">
+                    <a href="#!/itemdetail">
+                    <img ng-src="images/bam.e.jpg" alt="bam.e" class="img-responsive" height=300 width=300></a>
+                </div>
+        </div>
+   
+        <div class=" col-xs-4">
+            <div class="thumbnail">
+                <a href="#!/itemdetail">
+                    <img src="images/liversandgizzards.jpg" alt="liversandgizzards" class="img-responsive" height=300 width=300 ></a>
+            </div>
+        </div>
+          
+        <div class=" col-xs-4">
+            <div class="thumbnail">
+                <a href="#!/itemdetail">
+                    <img src="images/porkribs.jpg" alt="porkribs" class="img-responsive" height=300 width=300></a>
+            </div>
+        </div>
+  
+         <div class=" col-xs-4">
+            <div class="thumbnail">
+                <a href="#!/itemdetail">
+                    <img src="images/bittermelon.jpg" alt="bittermelon" class="img-responsive"  height=300 width=300></a>
+            </div>
+        </div>
+   
+        <div class=" col-xs-4">
+            <div class="thumbnail">
+                <a href="#!/itemdetail">
+                    <img src="images/broiledsalmon.jpg" alt="broiledsalmon" class="img-responsive" height=300 width=300></a>
+            </div>
+        </div>
+          
+        <div class=" col-xs-4">
+            <div class="thumbnail">
+                <a href="#!/itemdetail">
+                    <img src="images/pasta.jpg" alt="pasta" class="img-responsive" height=300 width=300></a>
+            </div>
+        </div>
+        
+        <div class=" col-xs-4">
+            <div class="thumbnail">
+                <a href="#!/itemdetail">
+                    <img src="images/penne.jpg" alt="penne" class="img-responsive" height=300 width=300></a>
+            </div>
+        </div>
+        
+        <div class=" col-xs-4">
+            <div class="thumbnail">
+                <a href="#!/itemdetail">
+                    <img src="images/tunasalad.jpg" alt="tunasalad" class="img-responsive" height=300 width=300></a>
+            </div>
+        </div>
+        
+         <div class="col-xs-4">
+            <div class="thumbnail">
+                <a href="#!/itemdetail">
+                    <img src="images/rawgreenbeans.jpg" alt="rawgreenbeans" class="img-responsive" height=300 width=300></a>
+            </div>
+        </div>
+    </div>
+<!-------------------------------------------------------------------------------->
+  <div class="row row-content">
+        <div class="col-xs-12" ng-if="!showMenu">
+            <h3>{{message}}</h3>
+        </div>
+        <div class="col-xs-12" ng-if="showMenu">
+                 <button ng-click="toggleDetails()" class="btn btn-xs btn-primary pull-right"
+                    type="button">
+                    {{showDetails ? 'Hide Details':'Show Details'}}
+                </button>
+                 <button ng-click="toggleFavorites()" class="btn btn-xs btn-primary pull-right"
+                    type="button">
+                    {{showFavorites ? 'Hide Favorite Button':'Show Favorite Button'}}
+                </button>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" ng-class="{active:isSelected(1)}">
+                        <a ng-click="select(1)" aria-controls="all items"
+                        role="tab">View All Items</a>
+                    </li>
+                    <li role="presentation" ng-class="{active:isSelected(2)}">
+                        <a ng-click="select(2)" aria-controls="appetizers"
+                         role="tab">Appetizers</a>
+                    </li>
+                    <li role="presentation" ng-class="{active:isSelected(3)}">
+                        <a ng-click="select(3)" aria-controls="mains"
+                         role="tab">Main Dishes</a>
+                    </li>
+                    <li role="presentation" ng-class="{active:isSelected(4)}">
+                        <a ng-click="select(4)" aria-controls="desserts"
+                         role="tab">Desserts</a>
+                    </li>
+                    <li role="presentation" ng-class="{active:isSelected(5)}">
+                        <a ng-click="select(5)" aria-controls="other" 
+                        role="tab">Other</a>
+                    </li> 
+                </ul>
+             
+                <div class="tab-content">
+                   <ul class="media-list tab-pane fade in active">
+                        <li class="media" ng-repeat="item in items | filter:filtText">
+                            <div class="media-left media-middle">
+                                <a ui-sref="app.itemdetails({id: item._id})">
+                                <img class="media-object img-thumbnail"
+                                ng-src={{item.image}} alt="bam.e">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h2 class="media-heading">{{item.name}}</h2>
+                                <p ng-show="showDetails">{{item.description}}</p>
+                                 <button  ng-show="showFavorites" ng-click="addToFavorites(item._id)" class="btn btn-xs btn-default pull-right" type="button"><i class="fa fa-heart"></i>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+          </div>
+     </div>  
+</div> <!-- container -->
+

@@ -1,0 +1,130 @@
+<!--sell.html
+by: Joy Lucas
+5/10/2017
+-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+           <ul class="breadcrumb">
+               <li><a href="#!/main">Home</a></li>
+               <li class="active">Post an item to Sell</li>
+           </ul>
+        </div>
+        <div class="col-xs-12">
+           <h3>Post an Item to Sell</h3>
+           <hr>
+        </div>
+    </div>
+  <div class="row row-content">
+      <form class="form-horizontal" name="postForm" ng-submit="post()" novalidate>
+     
+        <div class="form-group form-inline">
+            <label for="image" class="col-sm-2 control-label">Upload File</label>
+            
+             <div class="col-sm-10">
+                 <label class="custom-file" > 
+                     <button type="button" class="btn btn-xs btn-warning pull-right"
+                            ng-click = "uploadFile()" name="image">Upload
+                     </button>
+                    <input type="file" name="image" class="custom-file-input" 
+                           file-model="myFile"/>
+                 </label>
+              </div>
+        </div>
+<!------------------RADIO BUTTONS--------------------------->   
+        <div class="form-group"  ng-class="{ 'has-error' : invalidChannelSelection }">
+           <label for="delivery" class="col-sm-2 control-label">Will Deliver</label>
+            <div class="col-sm-10">
+                <label class="radio-inline" >
+                <input type="radio" name="delivery" value="yes" ng-model="posting.agree">
+                Yes
+                </label><br>
+                <label class="radio-inline">
+                    <input type="radio" name="no" 
+                     value="no"> Pick up only
+                </label> 
+            </div>
+                 <div class="col-sm-3 col-sm-offset-2" ng-show="posting.agree">
+                     <label for="distance" name="distance" class="col-sm-2 control-label">Distance</label>
+                    <select class="form-control"
+                       ng-model="posting.mychannel"
+                       ng-options="channel.value as channel.label for channel in channels">
+                        <option value="5miles" selected>Less than 5 miles</option>
+                        <option value="10miles">Less than 10 miles</option>
+                        <option value="15miles">Less than 15 miles</option> 
+                        <option value="20miles">Less than 20 miles</option> 
+                        <option value="anywhere">Anywhere</option>
+                        
+                    </select>
+                <span ng-show="invalidChannelSelection" class="help-block">Select an option.</span>
+                </div>
+         </div>
+
+<!------------------RADIO BUTTONS--------------------------->
+
+         <div class="form-group">
+            <label for="location" name="location" class="col-sm-2 control-label">Location</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control"
+                    ng-model="posting.location" required placeholder="Enter Zip Code">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="name" name="name" class="col-sm-2 control-label">Name of the Food Item</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control"
+                    ng-model="posting.name" required placeholder="Name of food item">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description" class="col-sm-2 control-label">Description</label>
+            <div class="col-sm-6">
+                <textarea class="form-control" rows="8" name="description"
+                    ng-model="posting.description" required placeholder="Write a description of the food item">
+                </textarea>
+           </div>
+        </div> 
+
+        <div class="form-group"> 
+            <label for="category" class="col-sm-2 control-label">Category</label>
+            <div class="col-sm-6">
+                <select class="form-control" name="category">
+                    <option value="Category">Category</option>
+                    <option value="appetizers">Appetizers</option>
+                    <option value="main dishes">Main Dishes</option>
+                    <option value="desserts">Desserts</option>
+                    <option value="other">Other</option>
+                </select>
+              </div>
+         </div>
+
+         <div class="form-group">
+            <label for="price" name="price" class="col-sm-2 control-label">Set the Price</label>
+            <div class="col-sm-4">
+                    <div class="input-group">
+                        <div class="input-group-addon">$</div>
+                            <input type="price" class="form-control" name="price" placeholder="Set the price" ng-model="posting.price">
+                    </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="contact" name="contact" class="col-sm-2 control-label">Contact #</label>
+            <div class="col-sm-4">
+                 <input type="text" class="form-control" name="contact"
+                    ng-model="posting.contact" required placeholder="Phone # or Email">
+                </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-6">
+                <button type="submit" name="post" class="btn btn-warning btn-lg btn-block" ng-disabled="postForm.$invalid">Post</button>
+            </div>
+        </div>
+         
+        </form> 
+    </div>
+</div>

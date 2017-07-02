@@ -1,0 +1,34 @@
+/* Set up */
+
+.btn{
+    padding: 10px 20px;
+    border: 0 none;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+}
+ 
+.btn-transparent {
+    background: transparent;
+    color: #F2F2F2;
+    -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -o-transition: background .2s ease-in-out, border .2s ease-in-out;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.btn-transparent:hover {
+        color: aliceblue !important;
+        background-color: #E1B79B;
+}
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#dropdownMenuButton{
+}
+.btn a{
+    color: aliceblue;
+}
