@@ -7,7 +7,7 @@ by: Joy Lucas
 
 
 module.exports = {
-    'secretKey': '12345-67890-09876-54321',
+ //   'secretKey': '12345-67890-09876-54321',
     
     //for local mongodb
   //  'mongoUrl' : 'mongodb://localhost:27017/webApp',

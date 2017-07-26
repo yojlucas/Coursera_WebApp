@@ -332,8 +332,6 @@ angular.module('lutongbahay')
                     ngDialog.close();
                 };
 }])
-
-//*============CONTACTCONTROLLER=============================*/
 ;
             
 

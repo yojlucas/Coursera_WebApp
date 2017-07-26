@@ -2,7 +2,7 @@
 {
   "items": [
     {
-      "id": "0",
+      "id": 0,
       "name": "Bam.e",
       "image": "images/bam.e.jpg",
       "category": "Main Dishes",
@@ -11,9 +11,9 @@
       "featured": "true",
       "comments": [
         {
-          "rating": "5",
-          "author": "Joy",
+          "rating": 5,
           "comment": "It is a perfect combination of noodles, vegestables and protein. A complete meal for any time of the day and any occasion!.",
+          "author": "Joy",
           "date": "2016-11-14T20:55:36.643Z"
         }
       ]
