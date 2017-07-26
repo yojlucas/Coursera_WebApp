@@ -13,7 +13,7 @@ module.exports = {
   //  'mongoUrl' : 'mongodb://localhost:27017/webApp',
     
     //for IBM CLoudant NoSQL
-   // 'uri': 'https://560c73e1-140f-4760-8aec-c20bc2ce143a-bluemix.cloudant.com/lutongbahaydb/_all_docs',
+    'uri': 'https://560c73e1-140f-4760-8aec-c20bc2ce143a-bluemix.cloudant.com/lutongbahaydb/_all_docs',
     
     //for mongoCluster
   //  'uri': 'mongodb://yojlucas:Myla12345@@lutongbahaycluster-shard-00-00-dnnpe.mongodb.net:27017,lutongbahaycluster-shard-00-01-dnnpe.mongodb.net:27017,lutongbahaycluster-shard-00-02-dnnpe.mongodb.net:27017/db?ssl=true&replicaSet=LutongBahayCluster-shard-0&authSource=admin',
@@ -23,7 +23,7 @@ module.exports = {
     
     //'MONGOLAB_URI': 'mongodb://localhost/lutongbahay',
     
-    'MONGOLAB_BROWN_URI':'mongodb://yojlucas:Myla12345@@ds143892.mlab.com:43892/lutongbahaydb',
+//'MONGOLAB_BROWN_URI':'mongodb://yojlucas:Myla12345@@ds143892.mlab.com:43892/lutongbahaydb',
     
     
     'facebook': {

@@ -10,9 +10,9 @@ var authenticate = require('./authenticate');
 
 var config = require('./config');
 
-//mongoose.connect(config.uri); 
+mongoose.connect(config.uri); 
 
-mongoose.connect(config.MONGOLAB_BROWN_URI);
+//mongoose.connect(config.MONGOLAB_BROWN_URI);
 
 var db = mongoose.connection;
 db.on('error',console.error.bind(console, 'Connection error:'));
